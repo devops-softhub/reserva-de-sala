@@ -33,8 +33,8 @@ O sistema divide os usuários em dois grupos principais para garantir a seguran�
 
 A tela principal é o coração do sistema.
 * **Calendário/Listagem:** Exibe todas as reservas ativas.
+* **Reservas:** Exibe todas as informações referente a reserva.
 * **Filtros:** Permite buscar reservas por data ou sala específica.
-* **Status:** Diferenciação visual para salas livres e ocupadas.
 
 ### 📝 Módulo de Reservas
 
@@ -45,7 +45,7 @@ A tela principal é o coração do sistema.
 
 Disponível apenas para o perfil **Administrador**:
 * **Cadastro Geral:** Páginas para registrar novas **Salas** (bloco, número, capacidade) e novos **Usuários**.
-* **Painel Admin (Django):** Área técnica para manutenção avançada de dados (acesso restrito ao NTI).
+* **Painel Admin (Django):** Área técnica para manutenção avançada de dados (acesso restrito aos administradores).
 
 ### 👤 Perfil do Usuário
 Área para atualização de dados cadastrais do próprio usuário (Nome, Telefone e Data de Nascimento).
@@ -72,7 +72,12 @@ Disponível apenas para o perfil **Administrador**:
 4.  Clique em **"Salvar Reserva"**.
     > **Nota:** O sistema alertará caso já exista uma reserva para o horário escolhido (conflito de horário).
 
-### 4.4 Cadastros Administrativos
+### 4.4 Relatórios
+1. No menu, clique em **"Relatório"**.
+2. Siga o seguinte fluxo: **Baixar Relatório** e selecione a confirmação para limpeza das reservas **Limpar Reservas** (Soft Delete)
+3. Para as reservas com mais de 1 ano cadastradas clique em **Limpeza de Dados Antigo** após isso, todas as reservas com mais de 1 ano serão deletadas do banco de dados (Hard Delete)
+
+### 4.5 Cadastros Administrativos
 1.  No menu, acesse a área de **Cadastro**.
 2.  Selecione a opção desejada: **Cadastrar Sala** ou **Cadastrar Usuário**.
 3.  Preencha todos os campos obrigatórios.
